@@ -84,7 +84,8 @@ $(document).on("click", "#catButton", function (event) {
         gifCard.append(p);
         gifCard.append(topicImage);
         $(gifDiv).prepend(gifCard);
-        console.log(p)
+        
+        // console.log(p)
       //   var downloadButton = $("<button>")
       //       downloadButton
       //         .attr("id", "dwnBtn")
