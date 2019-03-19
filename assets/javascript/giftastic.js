@@ -1,12 +1,13 @@
-var topics = ["marge simpson", "bart simpson", "homer simpson", "lisa simpson", "ned flanders", "mr. burns"];
+var topics = ["Marge Simpson", "Bart Simpson", "Homer Simpson", "Lisa Simpson", "Maggie Simpson", "Ned Flanders", "Mr. Burns", "Groundskeeper Willie", "Police Chief Clancy Wiggum", "Milhouse Van Houten", "Johnny Tightlips", "Moe Szyslak", "Jebediah Springfield","Sideshow Mel", "Dr. Nick Riviera", "Mayor 'Diamond' Joe Quimby", "Apu Nahasapeemapetilon", "Krusty the Clown"]
 var favorites = []; 
 var divButtons = $("<div>")
   .addClass("col-md-12")
   .attr("id", "button");
 $("body").append(divButtons);
-
+var bart = "assets/images/bart.png"
+      $('<img src='+bart+'>').addClass("bart").appendTo("body")
 function makeButtons() {
-
+  
   for (var i = 0; i < topics.length; i++) {
 
     var catButtons = $("<button>")
@@ -85,21 +86,24 @@ $(document).on("click", "#catButton", function (event) {
         gifCard.append(topicImage);
         $(gifDiv).prepend(gifCard);
         console.log(p)
-      //   var downloadButton = $("<button>")
-      //       downloadButton
-      //         .addClass("btn btn-primary m-2")
-      //         .attr("id", "dwnBtn")
-      //         .attr("href", results[j].images.original.url)
-      //         .text("download!")
-      //   p.append(downloadButton)
+        var downloadButton = $("<a>")
+            downloadButton
+              .addClass("btn btn-light m-2")
+              .attr("id", "download_button")
+              .attr("data-filepath", results[j].images.original.url)
+              .attr("href", results[j].images.original.url)
+              .text("download")
+        p.append(downloadButton)
 
-      //   jQuery(document).ready(function($) {
-
-      //  $('downloadButton[href$=".gif"]')
-      //     .attr('download', '')
-      //     .attr('target', '_blank'); 
-      //    });
+        //failed attempt at making a download button 
+        jQuery(document).ready(function($) {
+          $.preventDefault();
+       $('a[href$=".gif"]')
+          .attr('download', 'image-file')
+          .attr('viaFileDownloadPath', '_blank'); 
+         });
       } 
+
 
     } images(results)
 

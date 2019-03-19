@@ -1,0 +1,11 @@
+body {
+    background-color: #f9db44;
+}
+.bart {
+    position: absolute;
+    left: 800px;
+    top: -50px;
+}
+.card {
+    background-color: transparent;
+}
