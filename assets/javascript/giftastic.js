@@ -33,7 +33,7 @@ var divForm = $("<form>")
   .addClass("card float-right p-3 m-3")
   .append('<label for="stuff-input">Add another simpsons character!</label>')
   .append('<input type="text" id="form-input"><br>')
-  .append('<input class="btn btn-primary m-2" id="add-stuff" type="submit" value="more cats!">')
+  .append('<input class="btn btn-primary m-2" id="add-stuff" type="submit" value="Simpson!">')
   $(divContainer).append(divForm)
 
 $("#add-stuff").on("click", function (event) {
