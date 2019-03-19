@@ -4,10 +4,13 @@ var divButtons = $("<div>")
   .addClass("col-md-12")
   .attr("id", "button");
 $("body").append(divButtons);
+
 var bart = "assets/images/bart.png"
       $('<img src='+bart+'>').addClass("bart").appendTo("body")
+
 function makeButtons() {
-  
+  $("#button").empty();
+
   for (var i = 0; i < topics.length; i++) {
 
     var catButtons = $("<button>")
@@ -18,6 +21,7 @@ function makeButtons() {
       .text(topics[i]);
     $("#button").append(catButtons);
   }
+
 } makeButtons();
 var divRow = $("<div>")
     divRow 
@@ -96,8 +100,8 @@ $(document).on("click", "#catButton", function (event) {
         p.append(downloadButton)
 
         //failed attempt at making a download button 
-        jQuery(document).ready(function($) {
-          $.preventDefault();
+        jQuery(document).ready(function(event) {
+
        $('a[href$=".gif"]')
           .attr('download', 'image-file')
           .attr('viaFileDownloadPath', '_blank'); 

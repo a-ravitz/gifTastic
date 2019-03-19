@@ -1,11 +1,18 @@
 body {
     background-color: #f9db44;
+    z-index: 2;
 }
 .bart {
     position: absolute;
-    left: 800px;
-    top: -50px;
+    height: 500px;
+    left: 810px;
+    top: 160px;
+    z-index: 1;
 }
 .card {
     background-color: transparent;
+    z-index: 2;
+}
+.catButton {
+    z-index: 2;
 }
