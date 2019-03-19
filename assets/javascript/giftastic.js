@@ -7,8 +7,6 @@ $("body").append(divButtons);
 
 function makeButtons() {
 
-  $("#button").empty();
-
   for (var i = 0; i < topics.length; i++) {
 
     var catButtons = $("<button>")
@@ -53,7 +51,7 @@ $(document).on("click", "#catButton", function (event) {
   var cat = $(this).attr("data-cat");
   var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + cat + "&api_key=" + apiKey + "&limit=10"
 
-  alert(cat);
+  // alert(cat);
 
   $.ajax({
     url: queryURL,
@@ -87,19 +85,19 @@ $(document).on("click", "#catButton", function (event) {
         gifCard.append(topicImage);
         $(gifDiv).prepend(gifCard);
         console.log(p)
-        var downloadButton = $("<button>")
-            downloadButton
-              .attr("id", "dwnBtn")
-              .attr("href", results[j].images.original.url)
-              .text("download!")
-        p.append(downloadButton)
+      //   var downloadButton = $("<button>")
+      //       downloadButton
+      //         .attr("id", "dwnBtn")
+      //         .attr("href", results[j].images.original.url)
+      //         .text("download!")
+      //   p.append(downloadButton)
 
-        // jQuery(document).ready(function($) {
+      //   jQuery(document).ready(function($) {
 
-       $('downloadButton[href$=".gif"]')
-          .attr('download', '')
-          .attr('target', '_blank'); 
-        // });
+      //  $('downloadButton[href$=".gif"]')
+      //     .attr('download', '')
+      //     .attr('target', '_blank'); 
+      //    });
       } 
 
     } images(results)
