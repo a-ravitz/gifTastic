@@ -13,13 +13,13 @@ function makeButtons() {
 
   for (var i = 0; i < topics.length; i++) {
 
-    var catButtons = $("<button>")
-    catButtons
-      .attr("id", "catButton")
-      .attr("data-cat", topics[i])
+    var simpsonsButton = $("<button>")
+    simpsonsButton
+      .attr("id", "simpsonsButton")
+      .attr("data-character", topics[i])
       .addClass("cats btn btn-primary m-2")
       .text(topics[i]);
-    $("#button").append(catButtons);
+    $("#button").append(simpsonsButton);
   }
 
 } makeButtons();
@@ -49,14 +49,14 @@ $("#add-stuff").on("click", function (event) {
 
 });
 
-$(document).on("click", "#catButton", function (event) {
+$(document).on("click", "#simpsonsButton", function (event) {
   event.preventDefault();
 
   var apiKey = "HxwynQp8ob7R6ae0v86N9VgR8hhNS0DE";
-  var cat = $(this).attr("data-cat");
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + cat + "&api_key=" + apiKey + "&limit=10"
+  var character = $(this).attr("data-character");
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + character + "&api_key=" + apiKey + "&limit=10"
 
-  // alert(cat);
+  // alert(character);
 
   $.ajax({
     url: queryURL,
