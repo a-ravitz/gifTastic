@@ -54,7 +54,7 @@ $(document).on("click", "#catButton", function (event) {
 
   var apiKey = "HxwynQp8ob7R6ae0v86N9VgR8hhNS0DE";
   var cat = $(this).attr("data-cat");
-  var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + cat + "&api_key=" + apiKey + "&limit=10"
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + cat + "&api_key=" + apiKey + "&limit=10"
 
   // alert(cat);
 
